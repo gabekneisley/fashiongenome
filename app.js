@@ -4,7 +4,7 @@ var path = require('path');
 var mongoose = require('mongoose');
 var less = require('less-middleware');
 var app = express();
-var routes = require('routes');
+var routes = require('./routes');
 
 app.configure(function () {
   app.set('views', __dirname + '/views');

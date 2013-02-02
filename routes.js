@@ -9,8 +9,9 @@
 exports.init_routing = function (app) {
     // Landing Page + Login?
     app.get('/', function(req, res) {
+
         res.render('landing', {
-            //put context variables here
+
         })
     });
 
@@ -26,8 +27,9 @@ exports.init_routing = function (app) {
 
     // This is where the GENOME data entry for a piece of content would be.
     app.get('/content/genomify', function(req, res) {
+
         res.render('genome-entry', {
-            //put context variables here
+
         })
     });
 };
