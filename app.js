@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var mongoose = require('mongoose');
 var less = require('less-middleware');
-
 var app = express();
+var routes = require('routes');
 
 app.configure(function () {
   app.set('views', __dirname + '/views');
@@ -30,12 +30,8 @@ app.configure(function () {
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
-//set up the welcome content
-app.get('/', function(req, res) {
-  res.render('landing', {
-    //put context variables here
-  })
-});
+// Initialize the routes
+routes.init_routing(app);
 
 var port = process.env.PORT || 3000;
 
